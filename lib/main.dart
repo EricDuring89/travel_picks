@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:travel_picks/Style.dart';
 import 'package:travel_picks/country_card.dart';
+import 'package:travel_picks/greeting_card.dart';
 
 void main() {
   runApp(const TravelApp());
@@ -68,19 +70,9 @@ class _TravelHomePageState extends State<TravelHomePage> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Card(
-            elevation: 4,
-            color: Colors.lightBlueAccent,
-            child: Padding(
-              padding: const EdgeInsets.all(24.0),
-              child: Text(
-                "🌎 Willkommen zu deinen Reiseinspirationen",
-                style: TextStyle(fontSize: 18, color: Colors.white),
-              ),
-            ),
-          ),
+          GreetingCard(),
           SizedBox(height: 24),
-          const Text("Europa", style: TextStyle(fontSize: 18)),
+          Text18(text: "Europa"),
           const SizedBox(height: 8),
           SizedBox(
             height: 140,
@@ -98,7 +90,7 @@ class _TravelHomePageState extends State<TravelHomePage> {
             ),
           ),
           const SizedBox(height: 24),
-          const Text("Südamerika", style: TextStyle(fontSize: 18)),
+          const Text18(text: "Südamerika"),
           const SizedBox(height: 8),
           SizedBox(
             height: 140,
@@ -116,7 +108,7 @@ class _TravelHomePageState extends State<TravelHomePage> {
             ),
           ),
           const SizedBox(height: 24),
-          const Text("Favoriten", style: TextStyle(fontSize: 18)),
+          const Text18(text: "Favoriten"),
           const SizedBox(height: 8),
           Wrap(
             spacing: 8,
